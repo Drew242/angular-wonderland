@@ -16,6 +16,9 @@
 
       <input ng-keyup="wrCtrl.showFlavor($event)" ng-model="wrCtrl.cakeFlavor">
 
+      <div ng-click='wrCtrl.drinkWeirdPotion(potion)' ng-repeat='potion in wrCtrl.weirdPotions'>
+        {{ potion }}
+      </div>
 
   </body>
 </html>

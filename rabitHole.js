@@ -18,6 +18,21 @@ function whiteRabbitCtrl($http) {
 
   wrCtrl.showFlavor = function(e) {
     console.log(wrCtrl.cakeFlavor, e);
+    if(e.which === 13) {
+      console.log('Great flavor!!!');
+    }
+  }
+
+  wrCtrl.weirdPotions = [
+    'Blue',
+    'Pink',
+    'Chartreuse'
+  ]
+
+  wrCtrl.drinkWeirdPotion = function(potion) {
+    var potionIndex = wrCtrl.weirdPotions.indexOf(potion);
+    console.log('Alice drinks the weird ' + potion + ' potion');
+    wrCtrl.weirdPotions.splice(potionIndex, 1);
   }
 
 }
