@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="RabbitHole">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="rabitHole.js"></script>
+    <script src="wonderLand.js"></script>
+  </head>
+  <body ng-controller="whiteRabbit as wrCtrl">
+
+    <h2>Welcome to Wonderland</h2>
+      {{ wrCtrl.message }}
+
+      <button ng-click='wrCtrl.eatWeirdCake($event)'>
+        Eat a weird cake you found!
+      </button>
+
+      <input ng-keyup="wrCtrl.showFlavor($event)" ng-model="wrCtrl.cakeFlavor">
+
+
+  </body>
+</html>
